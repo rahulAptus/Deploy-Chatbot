@@ -1,0 +1,209 @@
+@import "tailwindcss";
+
+:root {
+  --iridium: #3d3d3b;
+  --black-eel: #424240;
+  --white: #ffffff;
+  --black: #000000;
+  --heavy-metal: #2c2c2c;
+  --medium-persian-blue: #0062a5;
+  --atlantis-green: #8cc63e;
+  --medium-gray: #363636;
+}
+
+@theme {
+  --font-default: "Jost";
+  --animate-blink: blink 0.5s ease-in-out infinite;
+  --animate-pulse: pulse 1.5s infinite;
+  --animate-fadeIn: fadeIn 1.5s ease;
+  --animate-fadeUp: fadeUp 1.5s ease;
+  --color-iridium: #3d3d3b;
+  --color-black-eel: #424240;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-heavy-metal: #2c2c2c;
+  --color-medium-persian-blue: #0062a5;
+  --color-atlantis-green: #8cc63e;
+  --color-medium-gray: #363636;
+  --color-raspberry-rose: #b6465f;
+  --color-pistachio: #86cd82;
+  --color-whitish-grey: #fefffe;
+  --color-columbia-blue: #bfd7ea;
+  --color-jet-fuel: #565653;
+  --color-lavender: #e5e1ee;
+  --color-light-green: #a5d0a8;
+  --color-tea-green: #c6dabf;
+  --color-mulberry: #c63e8c;
+  --blue-green-gradient: linear-gradient(45deg, #0062a5 0%, #8cc63e 100%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+@layer utilities {
+  .scrollbar-hidden {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
+
+.no-image {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(90deg, #f0f0f096 25%, #bebebe 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+  border-radius: 5px;
+  margin-top: 0.4em;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -150% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 10px;
+  z-index: 999;
+}
+
+::-webkit-scrollbar-track {
+  background: #cbcbcb;
+  z-index: 999;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0062a5;
+  z-index: 999;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  z-index: 999;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 99, 165, 0.68) 25%,
+    rgba(139, 198, 62, 0.49) 50%,
+    rgba(0, 99, 165, 0.68) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("./styles/fonts/Jost-Regular.ttf");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("./styles/fonts/Jost-Medium.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("./styles/fonts/Jost-Bold.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("./styles/fonts/Jost-SemiBold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("./styles/fonts/Jost-ExtraBold.ttf");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Jost";
+  src: url("./styles/fonts/Jost-Black.ttf");
+  font-weight: 900;
+  font-style: normal;
+}
