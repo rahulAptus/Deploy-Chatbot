@@ -31,7 +31,7 @@
 
   const iframe = document.createElement("iframe");
   iframe.id = "chatbot-iframe";
-  iframe.src = "https://deploy-chatbot-p66m.vercel.app/";
+  iframe.src = "https://annie-chatbot.vercel.app/";
   container.appendChild(iframe);
   document.body.appendChild(container);
 })();
